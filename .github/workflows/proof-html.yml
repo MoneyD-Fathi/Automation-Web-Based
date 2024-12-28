@@ -20,13 +20,13 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies (if any)
+        run: |
+          if [ -f package.json ]; then
+            npm install
+          fi
 
       - name: Validate HTML files
         uses: anishathalye/proof-html@v1.1.0
         with:
           directory: './'
-
-      - name: List HTML files
-        run: find . -name '*.html'
