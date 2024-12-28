@@ -5,15 +5,17 @@ on:
   pull_request:
     types: [opened]
 jobs:
-  run:
+  auto-assign:
     runs-on: ubuntu-latest
     permissions:
       issues: write
       pull-requests: write
     steps:
-    - name: 'Auto-assign issue'
-      uses: pozil/auto-assign-issue@v1
-      with:
+      - name: Auto-assign issues and PRs
+        uses: kentaro-m/auto-assign-action@v2.2.0
+        with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: UitmFathi
-          numOfAssignee: 1
+          reviewers: ''
+          number-of-assignees: 1
+          number-of-reviewers: 0
