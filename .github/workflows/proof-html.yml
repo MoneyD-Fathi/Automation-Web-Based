@@ -28,7 +28,7 @@ jobs:
           fi
 
       - name: Validate HTML files
-        uses: anishathalye/proof-html@v1.1.0
+        uses: anishathalye/proof-html@v2.2.0
         with:
           directory: './'
           url_ignore: 'https://www.linkedin.com/in/muhammad-jamilul-fathi-464b74332?lipi=urn:li:page:d_flagship3_profile_view_base_contact_details;B9r9QdI7QASv4kpJ4IfT+A=='
