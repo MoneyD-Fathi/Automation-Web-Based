@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/MoneyD-Fathi/demo-repository#readme",
   "dependencies": {
-    "@primer/css": "17.0.1"
+    "@primer/css": "22.0.0"
   }
 }
